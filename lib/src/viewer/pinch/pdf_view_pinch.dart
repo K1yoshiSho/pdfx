@@ -376,7 +376,7 @@ class _PdfViewPinchState extends State<PdfViewPinch>
     if (_pages.isEmpty) {
       return;
     }
-
+    if (_pages.isNotEmpty) {
     const fullPurgeDistThreshold = 33;
     const partialRemovalDistThreshold = 8;
 
@@ -438,6 +438,7 @@ class _PdfViewPinchState extends State<PdfViewPinch>
         );
         page._updateRealSizeOverlay();
       }
+    }
     }
   }
 
